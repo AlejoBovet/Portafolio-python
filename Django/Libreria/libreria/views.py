@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from fastapi import Form
 from .models import Libro
 from .forms import LibroForm
+from django.http import JsonResponse
+from django.views import View
 
 
 # Create your views here.
@@ -36,3 +38,4 @@ def eliminar(request, id):
     libro = Libro.objects.get(id=id)
     libro.delete()
     return redirect('libros')
+
