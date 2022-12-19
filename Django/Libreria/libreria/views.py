@@ -1,10 +1,11 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from fastapi import Form
-from .models import Libro
+from django.contrib.auth.forms import UserCreationForm
+from .models import Libro, Profile
 from .forms import LibroForm
 from django.http import JsonResponse
 from django.views import View
+from django.contrib import messages
 
 
 # Create your views here.
@@ -38,4 +39,16 @@ def eliminar(request, id):
     libro = Libro.objects.get(id=id)
     libro.delete()
     return redirect('libros')
+
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            messages.success(request, f'Usuario{username}creado') 
+            return redirect ('inicio')
+    else:
+        form = UserCreationForm()
+    context = {'form' : form}
+    return render(request, 'Users/register.html', context) 
 
