@@ -1,0 +1,10 @@
+ETL 1
+
+Descripción: Proceso ETL desde un archivo CSV a una base de datos alojada en SQL Server, utilizan cuaderno de Python.
+
+Contenido:
+
+- Csv de netflix shows (tambien se puede conseguir desde Kagle, URL: https://www.kaggle.com/datasets/shivamb/netflix-shows)
+- Query para crear base de datos modelo estrella
+- Cuaderno (Proceso ETL)
+- Diagrama de BD
