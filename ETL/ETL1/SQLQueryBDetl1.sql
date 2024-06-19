@@ -2,7 +2,7 @@
 
 CREATE TABLE Casts (
 	Cast_id INT IDENTITY(1,1) PRIMARY KEY ,
-	Name_cast Varchar(50)
+	Name_cast Varchar(350)
 );
 
 CREATE TABLE Type_show (
@@ -32,7 +32,7 @@ CREATE TABLE Date_show_release (
 
 
 CREATE TABLE Shows (
-	Show_id VARCHAR(4) PRIMARY KEY,
+	Show_id INT IDENTITY(1,1) PRIMARY KEY,
 	Title VARCHAR(70) NOT NULL,
 	Country VARCHAR(50),
 	Rating VARCHAR(5),
@@ -49,3 +49,6 @@ CREATE TABLE Shows (
 	CONSTRAINT FK_Show_release FOREIGN KEY (Date_show_release_id) REFERENCES Date_show_release(Date_show_release_id)
 
 );
+
+
+
