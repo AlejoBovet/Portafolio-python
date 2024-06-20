@@ -1,8 +1,6 @@
-
-
 CREATE TABLE Casts (
 	Cast_id INT IDENTITY(1,1) PRIMARY KEY ,
-	Name_cast Varchar(350)
+	Size_cast INT 
 );
 
 CREATE TABLE Type_show (
@@ -49,6 +47,4 @@ CREATE TABLE Shows (
 	CONSTRAINT FK_Show_release FOREIGN KEY (Date_show_release_id) REFERENCES Date_show_release(Date_show_release_id)
 
 );
-
-
 
