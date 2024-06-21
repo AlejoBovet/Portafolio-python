@@ -31,10 +31,10 @@ CREATE TABLE Date_show_release (
 
 CREATE TABLE Shows (
 	Show_id INT IDENTITY(1,1) PRIMARY KEY,
-	Title VARCHAR(70) NOT NULL,
-	Country VARCHAR(50),
-	Rating VARCHAR(5),
-	Director VARCHAR(70),
+	Title VARCHAR(300) NOT NULL,
+	Country VARCHAR(300),
+	Rating VARCHAR(15),
+	Director VARCHAR(300),
 	Cast_id INT,
 	Type_show_id INT,
 	Caracteristic_id INT,
